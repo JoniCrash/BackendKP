@@ -1,6 +1,6 @@
 <?php
-$id = $_GET['id'];
-$query = mysqli_query($koneksi," SELECT * FROM tb_mahasiswa WHERE id='$id'");
+$id_user = $_GET['id_user'];
+$query = mysqli_query($koneksi," SELECT * FROM user_app WHERE id_user='$user_id'");
 $view = mysqli_fetch_array($query);
 ?>
 
@@ -9,7 +9,7 @@ $view = mysqli_fetch_array($query);
            <!-- general form elements disabled -->
     <div class="card card-warning">
         <div class="card-header">
-            <h3 class="card-title">Edit Data Mahasiswa</h3>
+            <h3 class="card-title">Edit User App</h3>
         </div>
               <!-- /.card-header -->
             <div class="card-body">
@@ -18,9 +18,9 @@ $view = mysqli_fetch_array($query);
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Nama</label>
-                        <input type="text" name="nama" class="form-control" placeholder="Nama" value = "<?php echo $view['nama'];?>">
-                        <input type="text" name="id" class="form-control" placeholder="Nama" value = "<?php echo $view['id'];?>" hidden>
+                        <label>username</label>
+                        <input type="text" name="username" class="form-control" placeholder="username" value = "<?php echo $view['username'];?>">
+                        <input type="text" name="user_id" class="form-control" placeholder="username" value = "<?php echo $view['user_id'];?>" hidden>
                       </div>
                     </div>
                     <div class="col-sm-6">

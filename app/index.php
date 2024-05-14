@@ -37,8 +37,14 @@ include('header.php');?>
 if (isset($_GET['page'])){
   if($_GET['page']=='dashboard'){
     include('dashboard.php');
-  }else if($_GET['page']=='data-mahasiswa'){
-    include('data_mahasiswa.php');
+  }else if($_GET['page']=='data-pelanggan'){
+    include('data_pelanggan.php');
+  }else if($_GET['page']=='data-paket'){
+    include('data_paket.php');
+  }else if($_GET['page']=='data-pengajuan'){
+    include('data_pengajuan.php');
+  }else if($_GET['page']=='user-app'){
+    include('user_app.php');
   }else if($_GET['page']=='edit-data'){
     include('edit/edit_data.php');
   }else{

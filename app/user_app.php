@@ -6,7 +6,7 @@
             <div class="card">
 
               <div class="card-header">
-                <h3 class="card-title">Data Pelanggan</h3>
+                <h3 class="card-title">User Aplikasi</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -18,27 +18,27 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Nim</th>
-                    <th>Semester</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                     <?php
                     $no = 0; 
-                    $query = mysqli_query($koneksi, "SELECT * FROM tb_mahasiswa");
-                    while($mhs = mysqli_fetch_array($query)){
+                    $query = mysqli_query($koneksi, "SELECT * FROM user_app");
+                    while($user = mysqli_fetch_array($query)){
                       $no++
                     ?>
                   <tr>
                     <td width = 5%><?php echo $no?></td>
-                    <td><?php echo $mhs ['nama'];?></td>
-                    <td><?php echo $mhs ['nim'];?></td>
-                    <td><?php echo $mhs ['semester'];?></td>
+                    <td><?php echo $user ['username'];?></td>
+                    <td><?php echo $user ['email'];?></td>
+                    <td><?php echo $user ['pass'];?></td>
                     <td>
-                      <a onclick="hapus_data(<?php echo $mhs ['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
-                      <a href="index.php?page=edit-data&&id=<?php echo $mhs ['id'];?>" class="btn btn-sm btn-success">Edit</a>
+                      <a onclick="hapus_data(<?php echo $user ['id_user'];?>)" class="btn btn-sm btn-danger">Hapus</a>
+                      <a href="index.php?page=edit-data&&id=<?php echo $user ['id_user'];?>" class="btn btn-sm btn-success">Edit</a>
                     </td>
                   </tr>
                   <?php }?>
@@ -78,34 +78,23 @@
             <div class="modal-body">
               
                 <div class="form-group">
-                  <label class="control-label col-sm-2" for="email">Nama:</label>
+                  <label class="control-label col-sm-2" for="username">Username:</label>
                   <div class="col-sm-10">
-                    <input type="text" name = "nama" class="form-control" id="email" placeholder="Masukan nama" required >
+                    <input type="text" name = "username" class="form-control" id="username" placeholder="Masukan username" required >
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-sm-2" for="email">Nim:</label>
+                  <label class="control-label col-sm-2" for="email">Email:</label>
                   <div class="col-sm-10">
-                    <input type="text" name = "nim" class="form-control" id="email" placeholder="Masukan nim" required>
+                    <input type="email" name = "email" class="form-control" id="email" placeholder="Masukan email" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label >Semester:</label>
-                    <select class="form-select" name = "semester" required>
-                    <option selected>Pilih</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                  </div>
+                  <label class="control-label col-sm-2" for="pass">Password:</label>
+                  <div class="col-sm-10">
+                    <input type="password" name = "pass" class="form-control" id="pass" placeholder="Masukan Password" required>
+  
                 </div>
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                      <label><input type="checkbox"> Remember me</label>
-                    </div>
-                  </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">

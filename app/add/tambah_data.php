@@ -1,9 +1,9 @@
 <?php
 include('../../conf/config.php');
-$nama = $_GET['nama'];
-$nim = $_GET['nim'];
-$semester = $_GET['semester'];
+$username = $_GET['username'];
+$email = $_GET['email'];
+$pass = $_GET['pass'];
 
-$query = mysqli_query($koneksi,"INSERT INTO tb_mahasiswa(id,nama,nim,semester) VALUES('','$nama','$nim','$semester')");
-header('Location: ../index.php?page=data-mahasiswa');
+$query = mysqli_query($koneksi,"INSERT INTO user_app(id,username,email,pass) VALUES('','$username','$email','$pass')");
+header('Location: ../index.php?page=data-pelanggan');
 ?>
