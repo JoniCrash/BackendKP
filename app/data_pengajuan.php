@@ -2,7 +2,7 @@
 <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-30">
             <div class="card">
 
               <div class="card-header">
@@ -19,17 +19,16 @@
                   <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>
-                    <th>Nomor Identitas / NIK</th>
-                    <th>Alamat Sesuai KTP</th>
+                    <th>NIK / NPWP</th>
+                    <th>Alamat KTP</th>
                     <th>Alamat Pemasangan</th>
                     <th>Titik Kordinat</th>
                     <th>Email</th>
-                    <th>Nomor Handphone 1</th>
-                    <th>Nomor Handphone 2</th>
+                    <th>Nomor Hp 1</th>
+                    <th>Nomor Hp 2</th>
                     <th>Paket</th>
                     <th>Foto KTP</th>
                     <th>Foto Depan Rumah</th>
-                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -40,35 +39,33 @@
                       $no++
                     ?>
                   <tr>
-                    <td width = 5%><?php echo $no?></td>
-                    <td><?php echo $pengajuan ['Nama Lengkap'];?></td>
-                    <td><?php echo $pengajuan ['Nomor Identitas / NIK'];?></td>
-                    <td><?php echo $pengajuan ['Alamat Sesuai KTP'];?></td>
-                    <td><?php echo $pengajuan ['Alamat Pemasangan'];?></td>
-                    <td><?php echo $pengajuan ['Titik Kordinat'];?></td>
-                    <td><?php echo $pengajuan ['Email'];?></td>
-                    <td><?php echo $pengajuan ['Nomor Handphone 1'];?></td>
-                    <td><?php echo $pengajuan ['Nomor Handphone 2'];?></td>
-                    <td><?php echo $pengajuan ['Paket'];?></td>
-                    <td><?php echo $pengajuan ['Foto KTP'];?></td>
-                    <td><?php echo $pengajuan ['Foto Depan Rumah'];?></td>
-
-
+                    <td width = 5%><?= $no?></td>
+                    <td><?= $pengajuan ['Nama Lengkap'];?></td>
+                    <td><?= $pengajuan ['NIK / NPWP'];?></td>
+                    <td><?= $pengajuan ['AlamatKTP'];?></td>
+                    <td><?= $pengajuan ['Alamat Pemasangan'];?></td>
+                    <td><?= $pengajuan ['Titik Kordinat'];?></td>
+                    <td><?= $pengajuan ['Email'];?></td>
+                    <td><?= $pengajuan ['Nomor Hp 1'];?></td>
+                    <td><?= $pengajuan ['Nomor Hp 2'];?></td>
+                    <td><?= $pengajuan ['Paket'];?></td>
+                    <td><?= $pengajuan ['Foto KTP'];?></td>
+                    <td><?= $pengajuan ['Foto Depan Rumah'];?></td>
                     <td>
-                      <a onclick="hapus_data(<?php echo $pengajuan ['id_user'];?>)" class="btn btn-sm btn-danger">Hapus</a>
-                      <a href="index.php?page=edit-data&&id=<?php echo $pengajuan ['id_user'];?>" class="btn btn-sm btn-success">Edit</a>
+                      <a onclick="hapus_data(<?= $pengajuan ['id_pengajuan'];?>)" class="btn btn-sm btn-danger">Hapus</a>
+                      <a href="index.php?page=edit-data&&id=<?= $pengajuan ['id_pengajuan'];?>" class="btn btn-sm btn-success">Edit</a>
                     </td>
                   </tr>
                   <?php }?>
                   </tbody>
                   <tfoot>
-                  <tr>
+                  <!-- <tr>
                     <th>Rendering engine</th>
                     <th>Browser</th>
                     <th>Platform(s)</th>
                     <th>Engine version</th>
                     <th>CSS grade</th>
-                  </tr>
+                  </tr> -->
                   </tfoot>
                 </table>
               </div>
@@ -101,7 +98,7 @@
                     <input type="text" name = "username" class="form-control" id="username" placeholder="Masukan username" required >
                   </div>
                 </div>
-                
+
 
 
 

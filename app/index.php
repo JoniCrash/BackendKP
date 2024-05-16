@@ -11,7 +11,7 @@ include('header.php');?>
 <div class="wrapper">
 
   <!-- Preloader -->
-<?php include('preloader.php');?>
+<!-- <?php include('preloader.php');?> -->
 
   <!-- Navbar -->
   <?php include('navbar.php');?>
