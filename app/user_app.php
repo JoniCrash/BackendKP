@@ -74,7 +74,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form class="form-horizontal" method = "get" action="add/tambah_data.php">
+            <form class="form-horizontal" method = "get" action="add/data_user.php">
             <div class="modal-body">
               
                 <div class="form-group">
