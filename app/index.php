@@ -5,8 +5,8 @@ session_start();
 if(!$_SESSION ['nama']){
   header('Location: ../index.php?session=pageExpired');
 }
-include('header.php');?>
-<?php include('../conf/config.php');?>
+include('../conf/config.php');
+?>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -28,7 +28,25 @@ include('header.php');?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-<?php include('content_header.php');?>
+<!-- <?php include('content_header.php');?> -->
+<?php 
+include('header.php');
+if (isset($_GET['page'])){
+  if($_GET['page']=='dashboard'){
+    include('content-header/content_header_dashboard.php');
+  }elseif($_GET['page']=='user-app'){
+    include('content-header/content_header_user_app.php');
+  }elseif($_GET['page']=='data-pelanggan'){
+    include('content-header/content_header_pelanggan.php');
+  }elseif($_GET['page']=='pengajuan'){
+    include('content-header/content_header_pengajuan.php');
+  }else{
+    include('content-header/content_header_dashboard.php');
+  }
+}else{
+  include('content-header/content_header_dashboard.php');
+}
+?>
     <!-- /.content-header -->
 
     <!-- Main content -->
