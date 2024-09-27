@@ -21,7 +21,6 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Password</th>
-                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -42,8 +41,8 @@
                     </td>
                   </tr>
                   <?php }?>
-                  </tbody>
-                  <tfoot>
+                  </tbody>    
+                  <!-- <tfoot>
                   <tr>
                     <th>Rendering engine</th>
                     <th>Browser</th>
@@ -51,7 +50,7 @@
                     <th>Engine version</th>
                     <th>CSS grade</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
